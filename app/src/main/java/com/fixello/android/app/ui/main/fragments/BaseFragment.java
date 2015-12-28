@@ -17,9 +17,6 @@ import com.fixello.android.app.interfaces.IMainActivityListener;
 import com.fixello.android.app.ui.main.BaseActivity;
 import com.fixello.android.app.ui.main.IFragmentListener;
 
-/**
- * Created by Pedro on 15/9/2015.
- */
 public class BaseFragment extends Fragment {
 
     protected IFragmentListener mFragmentListener;
