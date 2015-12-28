@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                tools:context=".LoginActivity">
+
+    <ImageView
+            android:layout_width="match_parent"
+            android:id="@+id/image"
+            android:layout_height="200dp"/>
+    <!--
+    TODO: Add Tabview below, clicking on each should show new view
+    -->
+    <!-- Email Field -->
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="8dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp">
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:id="@+id/input_email"
+            android:hint="Email"
+            />
+    </android.support.design.widget.TextInputLayout>
+
+    <!-- Password Field-->
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp">
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="Password"
+            android:id="@+id/input_password"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <!-- Fix this to use appCompatButton-->
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/login_button"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        android:padding="@dimen/dimen_15dp"
+        android:text="Login"
+        />
+
+    <TextView android:id="@+id/link_signup"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="Sign Up With Email"
+        android:gravity="center"
+        android:textSize="16dip"/>
+</LinearLayout>
