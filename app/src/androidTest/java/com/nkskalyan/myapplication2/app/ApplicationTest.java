@@ -1,4 +1,4 @@
-package com.nkskalyan.myapplication2.app;
+package com.fixello.android.app;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
