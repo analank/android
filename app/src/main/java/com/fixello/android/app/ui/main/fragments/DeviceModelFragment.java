@@ -6,7 +6,9 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.Toast;
 
 import com.fixello.android.app.R;
 import com.fixello.android.app.ui.main.adapters.DeviceModelAdapter;
@@ -52,13 +54,18 @@ public class DeviceModelFragment extends BaseFragment implements View.OnClickLis
         super.onActivityCreated(savedInstanceState);
         deviceModelGrid = (GridView)(getView().findViewById(R.id.device_model_grid));
         deviceModelGrid.setAdapter(new DeviceModelAdapter(getActivity(), deviceList, deviceImages));
-//        mMainActivityListener.setTitle(getString(R.string.book_now));
+        deviceModelGrid.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id){
+                Toast.makeText(getContext(), "You Clicked from diff Fragment: " + deviceList[position], Toast.LENGTH_LONG).show();
+            }
+        });
+
         mMainActivityListener.setTitle("Something different");
     }
 
     @Override
     public void onClick(View v) {
-
     }
 
     /**

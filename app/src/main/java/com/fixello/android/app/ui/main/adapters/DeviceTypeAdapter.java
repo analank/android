@@ -12,6 +12,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.fixello.android.app.R;
+import com.fixello.android.app.interfaces.IMainActivityListener;
+import com.fixello.android.app.ui.main.IFragmentListener;
 import com.fixello.android.app.ui.main.fragments.DeviceModelFragment;
 
 /**
@@ -36,20 +38,6 @@ public class DeviceTypeAdapter extends BaseGridAdapter {
 
         holder.tv.setText(result[position]);
         holder.img.setImageResource(imageId[position]);
-
-        //This gets called in both DeviceModelFragment and BookNowFragment
-        rowView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Fragment fragment = DeviceModelFragment.newInstance();
-                FragmentManager fragmentManager = ((AppCompatActivity)context).getSupportFragmentManager();
-                fragmentManager.beginTransaction()
-                        .replace(R.id.device_grid_container, fragment)
-                        .addToBackStack(null)
-                        .commit();
-                Toast.makeText(context, "Clicked : "+result[position],Toast.LENGTH_LONG);
-            }
-        });
 
         return rowView;
     }

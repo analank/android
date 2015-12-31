@@ -6,12 +6,11 @@
     android:layout_height="match_parent">
     <GridView
         android:id="@+id/device_model_grid"
-        android:numColumns="1"
-        android:layout_margin="@dimen/dimen_15dp"
+        android:numColumns="2"
+        android:layout_margin="@dimen/dimen_5dp"
         android:layout_gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
     </GridView>
 
 </FrameLayout>

@@ -35,14 +35,6 @@ public class DeviceModelAdapter extends BaseGridAdapter{
         holder.tv.setText(result[position]);
         holder.img.setImageResource(imageId[position]);
 
-        rowView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //Change this to make call to DeviceModelFragment
-                Toast.makeText(context, "You Clicked " + result[position], Toast.LENGTH_LONG).show();
-            }
-        });
-
         return rowView;
     }
 }
